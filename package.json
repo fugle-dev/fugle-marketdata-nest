@@ -1,17 +1,26 @@
 {
-  "name": "fugle-marketdata-nest",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "name": "@fugle/marketdata-nest",
+  "version": "1.0.0",
+  "description": "A Nest module wrapper for @fugle/marketdata",
+  "keywords": [
+    "nest",
+    "nestjs",
+    "fugle",
+    "marketdata",
+    "stock",
+    "futures",
+    "options"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -71,5 +80,13 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fugle-dev/fugle-marketdata-nest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fugle-dev/fugle-marketdata-nest/issues"
+  },
+  "homepage": "https://github.com/fugle-dev/fugle-marketdata-nest#readme"
 }
