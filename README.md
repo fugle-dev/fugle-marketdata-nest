@@ -14,7 +14,7 @@ $ npm install --save @fugle/marketdata-nest @fugle/marketdata
 
 ## Getting started
 
-Once the installation is complete, to use the `RestClient` or `WebSocketClient`, first import `FugleMarketDataModule` and pass the options with `apiKey` to the `register()` method.
+Once the installation is complete, to use the `RestClient` or `WebSocketClient`, first import `FugleMarketDataModule` and pass the options with `apiKey` to the `forRoot()` method.
 
 ```typescript
 import { Module } from '@nestjs/common';
@@ -22,7 +22,7 @@ import { FugleMarketDataModule } from '@fugle/marketdata-nest';
 
 @Module({
   imports: [
-    FugleMarketDataModule.register({
+    FugleMarketDataModule.forRoot({
       apiKey: 'YOUR_API_KEY',
     }),
   ],
@@ -44,12 +44,12 @@ constructor(@InjectWebSocketClient() private readonly client: WebSocketClient) {
 
 ## Async configuration
 
-When you need to pass module options asynchronously instead of statically, use the `registerAsync()` method. As with most dynamic modules, Nest provides several techniques to deal with async configuration.
+When you need to pass module options asynchronously instead of statically, use the `forRootAsync()` method. As with most dynamic modules, Nest provides several techniques to deal with async configuration.
 
 One technique is to use a factory function:
 
 ```typescript
-FugleMarketDataModule.registerAsync({
+FugleMarketDataModule.forRootAsync({
   useFactory: () => ({
     apiKey: 'YOUR_API_KEY',
   }),
@@ -59,7 +59,7 @@ FugleMarketDataModule.registerAsync({
 Like other factory providers, our factory function can be [async](https://docs.nestjs.com/fundamentals/custom-providers#factory-providers-usefactory) and can inject dependencies through `inject`.
 
 ```typescript
-FugleMarketDataModule.registerAsync({
+FugleMarketDataModule.forRootAsync({
   imports: [ConfigModule],
   useFactory: async (configService: ConfigService) => ({
     apiKey: configService.get('FUGLE_MARKETDATA_API_KEY'),
@@ -71,7 +71,7 @@ FugleMarketDataModule.registerAsync({
 Alternatively, you can configure the `FugleMarketDataModule` using a class instead of a factory, as shown below.
 
 ```typescript
-FugleMarketDataModule.registerAsync({
+FugleMarketDataModule.forRootAsync({
   useClass: FugleMarketDataConfigService,
 });
 ```
@@ -92,7 +92,7 @@ class FugleMarketDataConfigService implements FugleMarketDataModuleOptionsFactor
 If you want to reuse an existing options provider instead of creating a private copy inside the `FugleMarketDataModule`, use the `useExisting` syntax.
 
 ```typescript
-FugleMarketDataModule.registerAsync({
+FugleMarketDataModule.forRootAsync({
   imports: [ConfigModule],
   useExisting: FugleMarketDataConfigService,
 });

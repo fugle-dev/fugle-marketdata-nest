@@ -1,11 +1,12 @@
-import { Module, DynamicModule, Provider } from '@nestjs/common';
+import { Module, DynamicModule, Provider, Global } from '@nestjs/common';
 import { RestClient, WebSocketClient } from '@fugle/marketdata';
 import { FugleMarketDataModuleOptions, FugleMarketDataModuleAsyncOptions, FugleMarketDataModuleOptionsFactory } from './interfaces';
 import { FUGLE_MARKETDATA_REST_CLIENT, FUGLE_MARKETDATA_WEBSOCKET_CLIENT, FUGLE_MARKETDATA_CLIENT_OPTIONS } from './fugle-marketdata.constants';
 
+@Global()
 @Module({})
 export class FugleMarketDataModule {
-  static register(options: FugleMarketDataModuleOptions): DynamicModule {
+  static forRoot(options: FugleMarketDataModuleOptions): DynamicModule {
     return {
       module: FugleMarketDataModule,
       providers: [
@@ -25,7 +26,7 @@ export class FugleMarketDataModule {
     };
   }
 
-  static registerAsync(options: FugleMarketDataModuleAsyncOptions): DynamicModule {
+  static forRootAsync(options: FugleMarketDataModuleAsyncOptions): DynamicModule {
     return {
       module: FugleMarketDataModule,
       imports: options.imports,

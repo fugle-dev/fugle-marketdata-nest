@@ -543,10 +543,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.37.0.tgz#cf1b5fa24217fe007f6487a26d765274925efa7d"
   integrity sha512-x5vzdtOOGgFVDCUs81QRB2+liax8rFg3+7hqM+QhBG0/G3F1ZsoYl97UrqgHgQ9KKT7G6c4V+aTUCgu/n22v1A==
 
-"@fugle/marketdata@^1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@fugle/marketdata/-/marketdata-1.0.0-beta.0.tgz#4884b3e04cf99ebd2f0353375d7c5fbe0f1d0f93"
-  integrity sha512-cumgECPZvLAWXx/YNBwUHZWXkEYfDGplI7x1uqNZ6ogyukcQGfa5ygmzscc1ajE1FJAg7r7S/VrrjXKtp5F/iw==
+"@fugle/marketdata@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@fugle/marketdata/-/marketdata-1.0.0.tgz#f866cebb52969ff11f45f2908098a2dcbb7455c2"
+  integrity sha512-VfZ2B4N70XLP7Jt9XxsiMUqF0CxXTzYj/zkqPZULrHWSUrIrtvX2fPLfnZfHyAmpzozo0kMxtp8gaKcguRxyrA==
   dependencies:
     isomorphic-fetch "^3.0.0"
     isomorphic-ws "^4.0.0"
