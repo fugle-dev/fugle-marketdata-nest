@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.0.1](https://github.com/fugle-dev/fugle-marketdata-nest/compare/v1.0.0...v1.0.1) (2023-07-01)
+
 # [1.0.0](https://github.com/fugle-dev/fugle-marketdata-nest/compare/v1.0.0-beta.0...v1.0.0) (2023-06-14)
 
 
