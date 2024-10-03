@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.1.0](https://github.com/fugle-dev/fugle-marketdata-nest/compare/v1.0.1...v1.1.0) (2024-10-03)
+
+
+### Features
+
+* export rest client & websocket client tokens ([82d92ea](https://github.com/fugle-dev/fugle-marketdata-nest/commit/82d92ea44d2b7e2ad7bd8d7cae1df25c82bf54f8))
+
 ## [1.0.1](https://github.com/fugle-dev/fugle-marketdata-nest/compare/v1.0.0...v1.0.1) (2023-07-01)
 
 # [1.0.0](https://github.com/fugle-dev/fugle-marketdata-nest/compare/v1.0.0-beta.0...v1.0.0) (2023-06-14)

@@ -1,6 +1,6 @@
 {
   "name": "@fugle/marketdata-nest",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A Nest module wrapper for @fugle/marketdata",
   "keywords": [
     "nest",
